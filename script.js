@@ -1,1 +1,5 @@
-document.write("This is a JS code");
+
+
+function gotoother() {
+    location.assign("home2.html")
+}
