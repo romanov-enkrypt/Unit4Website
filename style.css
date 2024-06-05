@@ -20,7 +20,11 @@ background-size: cover
   background-color: #000000;
 }
 #preorder{
-position: relative;
+position: absolute;
+top:0;
+right:0;
 background-position: 10% 50%;
+background-repeat: no-repeat;
+background-size: cover
 }
 /*background - LINEAR. Otherwise constant background-color:#484848;*/
