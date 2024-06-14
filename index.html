@@ -1,18 +1,35 @@
+<!DOCTYPE html>
 <html>
+    <head>
     <title>The New Galaxy | Play Today For FREE</title>
-    <div class="header">
-        <img width="50%" height="100%" src="Images/Header/TheNewGalaxyHeader4KNoBG.png">
-        <div id="preorder">
-            <button id="preorder">PREORDER NOW</button>
+        <script src="/JS/jquery-3.7.1.min.js"></script>
+        <script src="/JS/script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <div id="header">
+        <img class="headerproperties" width="50%" height="100%" src="Images/Header/TheNewGalaxyHeader4KNoBG.png">
+        <button class="headerproperties" onclick="preOrderPage()" class="preorder"><img type="image" class="preorder" src="Images/Header/PreOrderNoBG.png"></button>
+    </div>
+    <div id="footer">
+        <img style="width:50%" class="footerbuttonsimage" src="Images/Footer/COPYRIGHT.png">
+        <div style="height: 2vh"></div>
+        <div id="CompanyPegi">
+        <img id="cgslogo" class="cpsline" style="float:left; width:10%" src="Images/Footer/CGSLogo.png">
+        <img id="footerpegi" class="cpsline" width="20%" height="100%" src="Images/Footer/Pegi.png">
+        <button onclick="goX()"><img class="cpsline" class="socials" src="Images/Footer/XLogo.png"></button>
+        <button onclick="goInsta()"><img class="cpsline" class="socials" src="Images/Footer/InstagramLOGO.png"></button>
+        <button onclick="goYT()"><img class="cpsline" class="socials" src="Images/Footer/YouTubeLOGO.png"></button>
+        <button onclick="goTikTok()"><img class="cpsline" class="socials" src="Images/Footer/TikTokLOGO.png"></button>
         </div>
+        <div style="height: 2vh"></div>
+        <div style="height: 100%" id="footermisc">
+            <button class="footerbuttons"onclick="tosPage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/TOS.png"></button>
+            <button class="footerbuttons"onclick="ppPage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/PP.png"></button>
+            <button class="footerbuttons"onclick="ciPage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/CI.png"></button>
+            <button class="footerbuttons"onclick="eulaPage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/EULA.png"></button>
+            <button class="footerbuttons"onclick="ePage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/E.png"></button>
+            <button class="footerbuttons"onclick="fPage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/F.png"></button>
+        </div>
+        <div style="height: 2vh"></div>
     </div>
-    <div id="section1main">
-        <h1>Test</h1>
-    </div>
-    <h1>Test</h1>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <a href ="support.html">Go to page</a>
-    <button onclick="gotoother()">Go to other page
-    </button>
 </html>
