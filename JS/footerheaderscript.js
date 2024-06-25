@@ -22,6 +22,9 @@ function revealSide() {
 function preOrderPage() {
         $("#sidebar").animate({left: '-20%'});
 }
-$("#selectorbutton").click(function(){
-    $("#side").animate({left: '250px'});
-  }); 
+function goAbout() {
+    location.assign("about.html")
+}
+function goHome() {
+    location.assign("index.html")
+}

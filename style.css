@@ -2,24 +2,32 @@
 body{
     background-color: #000000;
     /*height:200vh <- TESTING PURPOSES*/
-    height:200vh;
 }
 h1 {
     font-family: 'Futura', sans-serif;
   }
-#header{
-background: linear-gradient(to bottom, #484848 0%, #000000 100%);
+.header{
 position: sticky;
 top:0;
 background-position: 10% 50%;
 background-repeat: no-repeat;
 background-size: cover
 }
+#gradientheader{
+  background: linear-gradient(to bottom, #484848 0%, #000000 100%);
+}
+#linearheader{
+  background-color: #484848;
+}
 #headercontents{
   display: flex;
   justify-content: space-between;
   margin-left:20px;
   margin-right:20px;
+}
+.sidebar{
+  margin-top: 2%;
+  margin:5%;
 }
 .selector{
   width:5%
@@ -28,8 +36,9 @@ background-size: cover
   height:10vh
 }
 .socials{
-  width:3%;
-  height:3%;
+  margin-top: 1%;
+  width:6%;
+  height:6%;
 }
 #footer{
   display: grid;
