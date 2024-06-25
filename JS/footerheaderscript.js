@@ -1,4 +1,5 @@
 let toggle = false;
+/* SOCIALS FUNCTION */
 function goX() {
     location.assign("https://x.com")
 }
@@ -19,15 +20,46 @@ function revealSide() {
     }
     toggle = !toggle;
 }
-function goAbout() {
-    location.assign("about.html")
-}
+
+/* SIDEBAR FUNCTION */
 function goHome() {
     location.assign("index.html")
 }
-function tosPage(){
-    location.assign("tos.html")
+function goTheLore() {
+    location.assign("the-lore.html")
+}
+function goChracters() {
+    location.assign("characters.html")
 }
 function goChangeLogs(){
-    location.assign("changelogs.html")
+    location.assign("change-logs.html")
+}
+function goMultiplayer() {
+    location.assign("multiplayer.html")
+}
+function goAbout() {
+    location.assign("about.html")
+}
+function goSupport() {
+    location.assign("support.html")
+}
+
+/* FOOTER FUNCTION */
+function tosPage(){
+    location.assign("terms-of-service.html")
+}
+function ppPage(){
+    location.assign("privacy-policy.html")
+}
+function ciPage(){
+    location.assign("company-informatio.html")
+}
+function eulaPage(){
+    location.assign("eula.html")
+}
+function ePage(){
+    location.assign("enquiries.html")
+}
+function fPage(){
+    location.assign("forums.html")
 }
