@@ -23,7 +23,7 @@ function preOrderPage() {
         $("#sidebar").animate({left: '-20%'});
 }
 function goAbout() {
-    location.assign("about.html")
+    location.assign("about")
 }
 function goHome() {
     location.assign("index.html")
