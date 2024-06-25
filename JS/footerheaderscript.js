@@ -19,12 +19,15 @@ function revealSide() {
     }
     toggle = !toggle;
 }
-function preOrderPage() {
-        $("#sidebar").animate({left: '-20%'});
-}
 function goAbout() {
-    location.assign("about")
+    location.assign("about.html")
 }
 function goHome() {
     location.assign("index.html")
+}
+function tosPage(){
+    location.assign("tos.html")
+}
+function goChangeLogs(){
+    location.assign("changelogs.html")
 }
