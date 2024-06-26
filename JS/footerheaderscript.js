@@ -52,7 +52,7 @@ function ppPage(){
     location.assign("privacy-policy.html")
 }
 function ciPage(){
-    location.assign("company-informatio.html")
+    location.assign("company-information.html")
 }
 function eulaPage(){
     location.assign("eula.html")
