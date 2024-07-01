@@ -28,7 +28,7 @@ function goHome() {
 function goTheLore() {
     location.assign("the-lore.html")
 }
-function goChracters() {
+function goCharacters() {
     location.assign("characters.html")
 }
 function goChangeLogs(){

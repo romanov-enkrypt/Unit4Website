@@ -1,7 +1,16 @@
 *{margin:0;}
-h1 {
-    font-family: 'Futura', sans-serif;
-  }
+h1{
+  font-family: 'Futura', sans-serif;
+}
+h2{
+  font-family: 'Futura', sans-serif;
+}
+h3 {
+  font-family: 'Futura', sans-serif;
+}
+p{
+  font-family: 'Futura', sans-serif;
+}
 @font-face {
   font-family: "furore";
   src: url("Fonts/Furore-webfont.woff") format('woff');
@@ -70,13 +79,8 @@ background-size: cover
 #copyright{
   color:#b4b4b4;
 }
-h3 {
-  margin: 0 10px;
-  padding: 0;
-  display: inline-block;
-  vertical-align: top;
-  color:#ffffff;
-  position: 50% 10%;
+.whitetext{
+  color: #ffffff;
 }
 .preorder{
   width:10%;
