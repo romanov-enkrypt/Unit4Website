@@ -1,0 +1,27 @@
+Contents File:
+
+T/(Text)
+S/(Text)
+C/+(Text)/-(Text)/.(Text)
+--
+
+T/ = Title of Change Log.
+S/ = Summary of Change Log.
+C/ = Concise changes (bullet points). (+)= Addition. (-)= Removal. (.)= Notice
+
+(--) = STOP READING LOGS. MUST BE PUT!
+
+Example:
+T/Version 0.1 - Alpha Testing
+S/This version is made to allow alpha testing of the game.
+C/+Added Game/+Added Buy Page/-Remove Waiting For Release 
+--
+
+>>>
+
+LeftRight File:
+
+P = Previous Version
+N = Next Version
+
+Place N/A IF NO DIRECTORY. IT WILL BLOCK FUNCTION. OTHERWISE PUT VERSION.
