@@ -32,7 +32,7 @@ function goCharacters() {
     location.assign("characters.html")
 }
 function goChangeLogs(){
-    location.assign("change-logs.html")
+    location.assign("change-logs/v0.1.html")
 }
 function goMultiplayer() {
     location.assign("multiplayer.html")
