@@ -26,7 +26,44 @@
         <button class="buttons sidebar" onclick="goSupport()"><img width="100%" src="Images/Sidebar/SUPPORT.png"></button>
     </div>
     <!--SIDEBAR ABOVE-->
-    
+    <div class="container">
+        <section class="forum">
+          <h2>General Discussion</h2>
+          <div id="posts">
+            <!-- Posts will be dynamically added here -->
+          </div>
+          <form id="postForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="submit">Post</button>
+          </form>
+        </section>
+      </div>
+      <script>
+        $(document).ready(function() {
+  $('#postForm').submit(function(e) {
+    e.preventDefault();
+
+    var username = $('#username').val();
+    var message = $('#message').val();
+
+    if (!username || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    var postHtml = '<div class="post"><strong>' + username + '</strong>: ' + message + '</div>';
+
+    $('#posts').append(postHtml);
+
+    // Clear form fields after posting
+    $('#username').val('');
+    $('#message').val('');
+  });
+});
+      </script>
     <!--GRADIENT DIVISOR BETWEEN PAGE & FOOTER (BELOW)-->
     <div style="height:2vh; background: linear-gradient(to bottom, #484848 0%, #000000 100%);"></div>
     <!--GRADIENT DIVISOR BETWEEN PAGE & FOOTER (ABOVE)-->

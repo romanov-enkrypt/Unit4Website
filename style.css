@@ -70,6 +70,14 @@ background-size: cover
   background-repeat: no-repeat;
   background-size: cover
   }
+#footerlinear{
+  display: grid;
+  place-items: center;
+  background-color: #484848;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
 #CompanyPegi{
   background-position: 100% 100%;
   display: flex;

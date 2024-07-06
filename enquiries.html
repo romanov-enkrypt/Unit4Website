@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body style="background-color: #484848;">
-    <div id="header">
+    <div class="header" id="linearheader">
         <div id="headercontents">
         <button id="selectorbutton" class="buttons selector" onclick="revealSide()"><img width="100%" src="Images/Header/SidebarToggle.png"></button>
         <img width="50%" height="100%" src="Images/Header/TheNewGalaxyHeader4KNoBG.png">
@@ -26,10 +26,88 @@
         <button class="buttons sidebar" onclick="goSupport()"><img width="100%" src="Images/Sidebar/SUPPORT.png"></button>
     </div>
     <!--SIDEBAR ABOVE-->
+    <!--MAIN BELOW-->
+    <div style="margin-left:20%; margin-right:20%; margin-top:2%; margin-bottom:2%;">
+        <img style="width:40%; justify-content: center; margin:2%;" src="./Images/Form/Support/Enquiries.png">
+        <div style="display:flex; justify-content: left;">
+        <form id="contactForm" style="width:100%; height:100%">
+            <img style="width:20%;" src="./Images/Form/Support/Name.png"><br>
+            <input class="formboxes" style="width:60%; height:5%;" type="name" id="name" name="name" required>
+            <br><br>
+            <img style="width:20%;" src="./Images/Form/Support/Email.png"><br>
+            <input class="formboxes" style="width:60%; height:5%;" type="email" id="email" name="email" required>
+            <br><br>
+            <img style="width:30%;" src="./Images/Form/Support/Subject.png"><br>
+            <input class="formboxes" style="width:60%; height:5%;" type="subject" id="subject" name="subject" required>
+            <br><br>
+            <img style="width:30%;" src="./Images/Form/Support/Message.png"><br>
+            <input class="formboxes" style="width:80%; height:50%;" type="message" id="message" name="message" required>
+            <br><br>
+            <button style="width:20%" class="buttons" type="submit"><img width="100%" src="Images/Form/Support/SubmitButton.png"></button>
+            <p id="notice" style="display: none; color:white">The form has been successfully sent. This only works on the front-end. The back-end has not been developed.</p>
+        </form>
+        </div>
+    </div>
+        <script>
+            $(document).ready(function() {
+    $('#contactForm').on('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        // Basic validation
+        let isValid = true;
+        let errorMessage = '';
+
+        const name = $('#name').val().trim();
+        const email = $('#email').val().trim();
+        const message = $('#message').val().trim();
+
+        if (name === '') {
+            isValid = false;
+            errorMessage += 'Name is required. ';
+        }
+
+        if (email === '') {
+            isValid = false;
+            errorMessage += 'Email is required. ';
+        } else if (!validateEmail(email)) {
+            isValid = false;
+            errorMessage += 'Invalid email format. ';
+        }
+
+        if (message === '') {
+            isValid = false;
+            errorMessage += 'Message is required. ';
+        }
+
+        if (!isValid) {
+            $('#responseMessage').html('<p class="error">' + errorMessage + '</p>');
+            return;
+        }
+        $.ajax({
+            type: 'POST',
+            url: '/submit-form', // Replace with your server endpoint
+            data: $(this).serialize(),
+            success: function(response) {
+                $('#responseMessage').html('<p>' + response.message + '</p>');
+            },
+            error: function(xhr, status, error) {
+                $('#responseMessage').html('<p class="error">An error occurred: ' + error + '</p>');
+            }
+        });
+    });
+
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(email);
+    }
+});
+        </script>
+        <!--MAIN ABOVE-->
     <!--FOOTER BELOW-->
-    <div id="footer">
-        <img style="width:50%" class="footerbuttonsimage" src="Images/Footer/COPYRIGHT.png">
+    <div id="footerlinear">
         <div style="height: 2vh"></div>
+        <img style="width:50%" class="footerbuttonsimage" src="Images/Footer/COPYRIGHT.png">
+        <div style="height: 5vh"></div>
         <div id="CompanyPegi">
         <img id="cgslogo" class="cpsline" style="float:left; width:10%; height:10%;" src="Images/Footer/CGSLogo.png">
         <img id="footerpegi" class="cpsline" width="20%" height="100%" src="Images/Footer/Pegi.png">

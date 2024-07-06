@@ -44,8 +44,8 @@
             <input class="formboxes" style="width:80%; height:50%;" type="message" id="message" name="message" required>
             <br><br>
             <button style="width:20%" class="buttons" type="submit"><img width="100%" src="Images/Form/Support/SubmitButton.png"></button>
+            <p id="notice" style="display: none; color:white">The form has been successfully sent. This only works on the front-end. The back-end has not been developed.</p>
         </form>
-        <div id="responseMessage"></div>
         </div>
     </div>
         <script>
@@ -83,8 +83,6 @@
             $('#responseMessage').html('<p class="error">' + errorMessage + '</p>');
             return;
         }
-
-        // If the form is valid, you can proceed with the AJAX request
         $.ajax({
             type: 'POST',
             url: '/submit-form', // Replace with your server endpoint
@@ -105,13 +103,11 @@
 });
         </script>
         <!--MAIN ABOVE-->
-        <!--GRADIENT DIVISOR BETWEEN PAGE & FOOTER (BELOW)-->
-    <div style="height:2vh; background: linear-gradient(to bottom, #484848 0%, #000000 100%);"></div>
-    <!--GRADIENT DIVISOR BETWEEN PAGE & FOOTER (ABOVE)-->
     <!--FOOTER BELOW-->
-    <div id="footer">
-        <img style="width:50%" class="footerbuttonsimage" src="Images/Footer/COPYRIGHT.png">
+    <div id="footerlinear">
         <div style="height: 2vh"></div>
+        <img style="width:50%" class="footerbuttonsimage" src="Images/Footer/COPYRIGHT.png">
+        <div style="height: 5vh"></div>
         <div id="CompanyPegi">
         <img id="cgslogo" class="cpsline" style="float:left; width:10%; height:10%;" src="Images/Footer/CGSLogo.png">
         <img id="footerpegi" class="cpsline" width="20%" height="100%" src="Images/Footer/Pegi.png">
