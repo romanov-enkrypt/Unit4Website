@@ -65,7 +65,7 @@ function fPage(){
 }
 document.addEventListener("DOMContentLoaded", () => {
     const headerHTML = `
-    <div class="header" id="gradientheader">
+    <div id="header">
     <div id="headercontents">
     <button id="selectorbutton" class="buttons selector" onclick="revealSide()"><img width="100%" src="Images/Header/SidebarToggle.png"></button>
     <img width="50%" height="100%" src="Images/Header/TheNewGalaxyHeader4KNoBG.png">

@@ -28,7 +28,7 @@ p{
   color: white;
   font-size: 200%;
 }
-.header{
+#header{
 position: sticky;
 top:0;
 background-position: 10% 50%;
