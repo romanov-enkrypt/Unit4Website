@@ -65,7 +65,7 @@ function fPage(){
 }
 document.addEventListener("DOMContentLoaded", () => {
     const headerHTML = `
-    <div id="header">
+    <div id="header" style="z-index: 1;">
     <div id="headercontents">
     <button id="selectorbutton" class="buttons selector" onclick="revealSide()"><img width="100%" src="Images/Header/SidebarToggle.png"></button>
     <img width="50%" height="100%" src="Images/Header/TheNewGalaxyHeader4KNoBG.png">
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div></div>
 <!--HEADER ABOVE-->
 <!--SIDEBAR BELOW-->
-<div id="sidebar" style="background-color: #3e3e3e; width:20%; height:100vh; position:fixed; left:-20%;">
+<div id="sidebar" style="background-color: #3e3e3e; width:20%; height:100vh; position:fixed; left:-20%; z-index: 2;">
     <img width="100%" src="Images/Sidebar/TNGHeader.png">
     <button class="buttons sidebar" onclick="goHome()"><img width="100%" src="Images/Sidebar/HOME.png"></button>
     <button class="buttons sidebar" onclick="goTheLore()"><img width="100%" src="Images/Sidebar/THELORE.png"></button>

@@ -31,15 +31,10 @@ p{
 #header{
 position: sticky;
 top:0;
+background: linear-gradient(to bottom, #484848 0%, #000000 100%);
 background-position: 10% 50%;
 background-repeat: no-repeat;
 background-size: cover
-}
-#gradientheader{
-  background: linear-gradient(to bottom, #484848 0%, #000000 100%);
-}
-#linearheader{
-  background-color: #484848;
 }
 #headercontents{
   display: flex;
