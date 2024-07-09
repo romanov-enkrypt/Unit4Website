@@ -11,19 +11,29 @@
         <img style="width:30%; margin:2%;" src="./Images/Multiplayer/Multiplayer.png">
     </div>
         <!--Region Sidebar-->
-        <div style="justify-content:left; align-items: center; display: flex;">
+        <div style="justify-content: left; align-items: center; display: flex;">
         <div style="justify-content: flex-start; align-items: center; flex-direction: column; display: flex; margin-left: 5%; width:14%;">
             <button style="width:100%;" class="buttons"><img style="width: 100%;" src="./Images/Multiplayer/CreateAServer.png"></button>
             <img class="sidemenu" src="./Images/Multiplayer/Region.png">
-            <button class="buttons sidemenu"><img class="width" src="./Images/Multiplayer/Europe.png"></button>
-            <button class="buttons sidemenu"><img class="width" src="./Images/Multiplayer/NorthAmerica.png"></button>
-            <button class="buttons sidemenu"><img class="width" src="./Images/Multiplayer/SouthAmerica.png"></button>
-            <button class="buttons sidemenu"><img class="width" src="./Images/Multiplayer/Asia.png"></button>
-            <button class="buttons sidemenu"><img class="width" src="./Images/Multiplayer/Oceania.png"></button>
-            <button class="buttons sidemenu"><img class="width" src="./Images/Multiplayer/Africa.png"></button>
+            <button id ="eu" class="buttons sidemenu" onclick="server('eu')"><img class="region width" src="./Images/Multiplayer/Europe.png"></button>
+            <button id ="na" class="buttons sidemenu" onclick="server('na')"><img class="region width" src="./Images/Multiplayer/NorthAmerica.png"></button>
+            <button id ="sa" class="buttons sidemenu" onclick="server('sa')"><img class="region width" src="./Images/Multiplayer/SouthAmerica.png"></button>
+            <button id ="as" class="buttons sidemenu" onclick="server('as')"><img class="region width" src="./Images/Multiplayer/Asia.png"></button>
+            <button id ="oc" class="buttons sidemenu" onclick="server('oc')"><img class="region width" src="./Images/Multiplayer/Oceania.png"></button>
+            <button id ="af" class="buttons sidemenu" onclick="server('af')"><img class="region width" src="./Images/Multiplayer/Africa.png"></button>
         </div>
+        <script>
+                /*function server(region) {
+                    let i = 0
+                    let regions = document.getElementsByClassName("region");
+                for (i = 0; i < regions.length; i++) {
+                    regions[i].style.opacity=1;
+                }
+                document.getElementById(region).style.opacity=.4;
+            }*/
+        </script>
         <!--Divider-->
-        <div style="width: 1.8%;">
+        <div style="width: 2.2%;">
             <img style="margin: 20%; width: 32%;" src="./Images/Multiplayer/Divider.png">
         </div>
         <!--Server List-->
@@ -114,11 +124,21 @@
             </div>
         </div>
     </div>
+    <div style="justify-content: flex-start; align-items: center; margin-left: 20%; display: flex;">
+        <h1 id="pagenum" class="whitetext stats">Page: 1/1</h1>
+        <button style="width:3%" class="buttons" onclick="goPrevious()"><img class="width100" src="./Images/Multiplayer/LeftButton.png"></button>
+        <button style="width:3%" class="buttons" onclick="goNext()"><img class="width100" src="./Images/Multiplayer/RightButton.png"></button>
+        <div style="margin-left: 2%; width:50%;" id="search" class="mplobbies formboxes">
+        <img style="width:10%" src="./Images/Multiplayer/Search.png">
+        <input class="formboxes" style="width:100%; height:2vw; font-size: 2vw;" type="server" id="server" name="server">
+        </div>
+    </div>
+    
 </body>
 <style>
     .sidemenu{
         width:70%;
-        margin:5%;
+        margin:10%;
     }
     .width{
         width:100%
