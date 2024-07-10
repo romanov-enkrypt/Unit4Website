@@ -63,6 +63,9 @@ function ePage(){
 function fPage(){
     location.assign("forums.html")
 }
+function preOrderPage() {
+    location.assign("preorder.html")
+}
 document.addEventListener("DOMContentLoaded", () => {
     const headerHTML = `
     <div id="header" style="z-index: 1;">
