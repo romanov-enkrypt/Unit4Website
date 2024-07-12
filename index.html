@@ -7,11 +7,56 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body style="background-color: #000000;">
+        <div style="height: 100%;">
+            <div style="width:100%;">
+            <img style="width:100%" src="./Images/Index/FrontPage1.png">
+            <h1 id="firsttext" class="furorenostroke" style="opacity: 0; margin: 5%; font-size: 5vw; position: absolute; text-align: center; transform: translate(-0%, -300%);">GALAXIES FAR, <br> FAR, AWAY...</h1>
+        </div>
+        <div style="width:100%;">
+            <img style="width:100%" src="./Images/Index/FrontPage2.png">
+            <h1 id="secondtext" class="furorenostroke" style="margin: 5%; font-size: 5vw; position: absolute; text-align: center; transform: translate(50%, -450%);">UNITE TOGETHER<br>IN HARMONY</h1>
+            <h1 id="thirdtext" class="furorenostroke" style="margin: 5%; font-size: 5vw; position: absolute; text-align: center; transform: translate(80%, -250%);">FOR YOU TO...</h1>
+        </div>
+        <div style="height:2vh; background: linear-gradient(to top, #484848 0%, #000000 100%);"></div>
+        <div style="height:75%; background: linear-gradient(to bottom, #484848 0%, #000000 100%);">
+        <div style="width:100%; text-align: center;"><h1 style="font-size: 5vw;" class="furorenostroke">Embrace a community!</h1></div>
+        <div style="justify-content: left; align-items: center; display: flex;">
+            <div class="sidepre footerbuttonsimage">
+                <img style="width:60%; float:left;" src="./Images/Index/DeathStar.png">
+            </div>
+            <div style="width: 100%; text-align: center; justify-content: center;">
+                <h2 style="font-size: 3vw;" class="furorenostroke">PRE-ORDER FOR</h2>
+                <h2 style="font-family: furore; color: rgb(255, 255, 0); font-size: 4vw;">HALF PRICE</h2>
+                <br>
+                <h3 style="text-decoration: line-through; color: rgb(255, 0, 0); font-size: 2vw; transform: rotate(-20deg); float: left;">£29.99</h3>
+                <button style="width: 80%;" class="buttons" onclick="preOrderPage()"><img width="100%" src="Images/Index/BuyNow.png"></button>
+                <h3 style="color: rgb(0, 255, 0); font-size: 5vw;">£14.99</h3>
+            </div>
+            <div class="sidepre footerbuttonsimage">
+                <img style="width:70%; float:right;" src="./Images/Index/FlyingBoy.png">
+            </div>
+            </div>
+        </div>
+        </div>
 </body>
+<style>
+    .sidepre{
+        margin:3%;
+    }
+    .furorenostroke{
+        color: #ffffff; 
+        font-family: furore;
+    }
+</style>
 <script>
+    $(document).ready(function(){
+      $("#firsttext").animate({
+        opacity: 1
+      }, 1000); // Adjust the duration as needed
+    });
     window.onload = function() {
-    /* Remove Divisor 
-    document.getElementById("divisor").remove();*/
+
+    document.getElementById("divisor").remove();
     /*Make Header Gradient Linear
     document.getElementById("header").style.background="#484848";*/
     /*Make Footer Gradient Linear
