@@ -68,11 +68,11 @@ function preOrderPage() {
 }
 document.addEventListener("DOMContentLoaded", () => {
     const headerHTML = `
-    <div id="header" style="z-index: 1;">
-    <div id="headercontents">
-    <button id="selectorbutton" class="buttons selector" onclick="revealSide()"><img width="100%" src="Images/Header/SidebarToggle.png"></button>
+    <div id="header" style="position: sticky; top:0; background: linear-gradient(to bottom, #484848 0%, #000000 100%); background-position: 10% 50%; background-repeat: no-repeat; background-size: cover" style="z-index: 1;">
+    <div style="display: flex; justify-content: space-between; margin-left:20px; margin-right:20px;">
+    <button id="selectorbutton" class="buttons" style="width:5%" onclick="revealSide()"><img width="100%" src="Images/Header/SidebarToggle.png"></button>
     <img width="50%" height="100%" src="Images/Header/TheNewGalaxyHeader4KNoBG.png">
-    <button class="preorder buttons" onclick="preOrderPage()"><img width="100%" src="Images/Header/PreOrderNoBG.png"></button>
+    <button class=" buttons" style="width:10%;" onclick="preOrderPage()"><img width="100%" src="Images/Header/PreOrderNoBG.png"></button>
 </div></div>
 <!--HEADER ABOVE-->
 <!--SIDEBAR BELOW-->
@@ -93,19 +93,19 @@ document.addEventListener("DOMContentLoaded", () => {
     <div id="divisor"; style="height:2vh; background: linear-gradient(to bottom, #484848 0%, #000000 100%);"></div>
     <!--GRADIENT DIVISOR BETWEEN PAGE & FOOTER (ABOVE)-->
         <!--FOOTER BELOW-->
-        <div id="footer">
+        <div id-"footer" style="display: grid; place-items: center; background: linear-gradient(to bottom, #000000 0%, #484848 100%); background-position: 50% 50%; background-repeat: no-repeat; background-size: cover;">
         <img style="width:50%" class="footerbuttonsimage" src="Images/Footer/COPYRIGHT.png">
         <div style="height: 2vh"></div>
-        <div id="CompanyPegi">
-        <img id="cgslogo" class="cpsline" style="float:left; width:10%; height:10%;" src="Images/Footer/CGSLogo.png">
-        <img id="footerpegi" class="cpsline" width="20%" height="100%" src="Images/Footer/Pegi.png">
+        <div style="background-position: 100% 100%; display: flex; justify-content: center;">
+        <img class="cpsline" style="float:left; width:10%; height:10%; background-position: 10% 10%;" src="Images/Footer/CGSLogo.png">
+        <img class="cpsline" background-position: 50% 50%; width="20%" height="100%" src="Images/Footer/Pegi.png">
         <button class="buttons socials" onclick="goX()"><img width="100%" class="cpsline" src="Images/Footer/XLogo.png"></button>
         <button class="buttons socials" onclick="goInsta()"><img width="100%" class="cpsline" src="Images/Footer/InstagramLOGO.png"></button>
         <button class="buttons socials" onclick="goYT()"><img width="100%" class="cpsline" src="Images/Footer/YouTubeLOGO.png"></button>
         <button class="buttons socials" onclick="goTikTok()"><img width="100%" class="cpsline" src="Images/Footer/TikTokLOGO.png"></button>
         </div>
         <div style="height: 2vh"></div>
-        <div style="height: 100%; width: 80%" id="footermisc">
+        <div style="height: 100%; width: 80%; background-position: 100% 100%; display: flex; justify-content: center;">
             <button class="buttons footerbuttons" onclick="tosPage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/TOS.png"></button>
             <button class="buttons footerbuttons" onclick="ppPage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/PP.png"></button>
             <button class="buttons footerbuttons" onclick="ciPage()"><img type="image" class="footerbuttonsimage" src="Images/Footer/CI.png"></button>

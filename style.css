@@ -1,14 +1,5 @@
 *{margin:0;}
-h1{
-  font-family: 'Futura', sans-serif;
-}
-h2{
-  font-family: 'Futura', sans-serif;
-}
-h3 {
-  font-family: 'Futura', sans-serif;
-}
-p{
+h1, h2, h3, p{
   font-family: 'Futura', sans-serif;
 }
 @font-face {
@@ -21,6 +12,18 @@ p{
   -webkit-text-stroke-color: black; 
   font-family: furore;
 }
+.width100{
+  width: 100%;
+}
+.mainbit{
+  color: #ffffff;
+  font-family: furore; 
+  padding:3%;
+}
+.whitefurore{
+  color: #ffffff;
+  font-family: furore; 
+}
 .formboxes{
   background-color: #333333; 
   border-radius: 15px;
@@ -28,78 +31,17 @@ p{
   color: white;
   font-size: 200%;
 }
-#header{
-position: sticky;
-top:0;
-background: linear-gradient(to bottom, #484848 0%, #000000 100%);
-background-position: 10% 50%;
-background-repeat: no-repeat;
-background-size: cover
-}
-#headercontents{
-  display: flex;
-  justify-content: space-between;
-  margin-left:20px;
-  margin-right:20px;
-}
 .sidebar{
   margin-top: 2%;
   margin:5%;
-}
-.selector{
-  width:5%
-}
-.divide{
-  height:10vh
 }
 .socials{
   margin-top: 1%;
   width:6%;
   height:6%;
 }
-#footer{
-  display: grid;
-  place-items: center;
-  background: linear-gradient(to bottom, #000000 0%, #484848 100%);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover
-  }
-#footerlinear{
-  display: grid;
-  place-items: center;
-  background-color: #484848;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover
-}
-#CompanyPegi{
-  background-position: 100% 100%;
-  display: flex;
-  justify-content: center;
-}
-#footermisc{
-  background-position: 100% 100%;
-  display: flex;
-  justify-content: center;
-}
-#footerpegi{
-  background-position: 50% 50%;
-}
-#cgslogo {
-  background-position: 10% 10%;
-}
-#section1main{
-  background-color: #000000;
-}
-#copyright{
-  color:#b4b4b4;
-}
 .whitetext{
   color:#ffffff;
-}
-.preorder{
-  width:10%;
 }
 .buttons{
   background-color: transparent;
@@ -112,16 +54,13 @@ background-size: cover
   margin: 0 10px;
   width:20%;
   display: inline-block;
-
-/* 
-  display: flex;
-  position: 50% 50%;
-  justify-content: space-around;
-  
-  width: 10%;*/
 }
 .footerbuttonsimage{
-
   width: 100%;
 }
-/*background - LINEAR. Otherwise constant background-color:#484848;*/
+.black{
+  background-color: #000000;
+}
+.gray{
+  background-color: #484848;
+}
