@@ -1,4 +1,5 @@
 let toggle = false;
+let toggle2 = false;
 /* SOCIALS FUNCTION */
 function goX() {
     location.assign("https://x.com")
@@ -19,6 +20,7 @@ function revealSide() {
         $("#sidebar").animate({left: '0%'});
     }
     toggle = !toggle;
+    document.getElementById("sidebarAudio").play();
 }
 
 /* SIDEBAR FUNCTION */
@@ -43,7 +45,14 @@ function goAbout() {
 function goSupport() {
     location.assign("support.html")
 }
-
+function volumeToggle() {
+    if (toggle2) {
+        $("#audioBar").animate({right: '-96.5%'});
+    } else {
+        $("#audioBar").animate({right: '-86%'});
+    }
+    toggle2 = !toggle2;
+}
 /* FOOTER FUNCTION */
 function tosPage(){
     location.assign("terms-of-service.html")
@@ -68,7 +77,11 @@ function preOrderPage() {
 }
 document.addEventListener("DOMContentLoaded", () => {
     const headerHTML = `
-    <div id="header" style="position: sticky; top:0; background: linear-gradient(to bottom, #484848 0%, #000000 100%); background-position: 10% 50%; background-repeat: no-repeat; background-size: cover" style="z-index: 1;">
+    <audio id="sidebarAudio">
+    <source src="Audio/Sidebar.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <div id="header" style="position: sticky; top:0; background: linear-gradient(to bottom, #484848 0%, #000000 100%); background-position: 10% 50%; background-repeat: no-repeat; background-size: cover; z-index: 3;">
     <div style="display: flex; justify-content: space-between; margin-left:20px; margin-right:20px;">
     <button id="selectorbutton" class="buttons" style="width:5%" onclick="revealSide()"><img width="100%" src="Images/Header/SidebarToggle.png"></button>
     <img width="50%" height="100%" src="Images/Header/TheNewGalaxyHeader4KNoBG.png">

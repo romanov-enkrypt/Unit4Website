@@ -7,6 +7,16 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="black">
+        <audio id="myAudio" loop autoplay>
+            <source src="Audio/MainMenu.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="audioBar" style="position: fixed;right:-96.5%; bottom:50%; background-color: #484848; padding: 5px; width:100%;">
+            <div id="audioControl" style="width:30%">
+                <button onclick="volumeToggle()" class="buttons" style="width:12%" id="audioButton"><img style="width:100%" src="./Images/Header/Speaker.png"></button>
+                <input style="width:30%"type="range" id="audioSlider" min="0" max="100" value="100">
+            </div>
+        </div>
         <div style="height: 100%;">
             <div style="width:100%;">
             <img style="width:100%" src="./Images/Index/FrontPage1.png">
@@ -14,12 +24,25 @@
         </div>
         <div style="width:100%;">
             <img style="width:100%" src="./Images/Index/FrontPage2.png">
-            <h1 id="secondtext" class="furorenostroke" style="margin: 5%; font-size: 5vw; position: absolute; text-align: center; transform: translate(50%, -450%);">UNITE TOGETHER<br>IN HARMONY</h1>
-            <h1 id="thirdtext" class="furorenostroke" style="margin: 5%; font-size: 5vw; position: absolute; text-align: center; transform: translate(80%, -250%);">FOR YOU TO...</h1>
         </div>
+    <div style="height: 100vh">    
+        <h1 class="furorenostroke" style="margin: 5%; font-size: 5vw; position: absolute; text-align: center; transform: translate(50%, -0);">UNITE TOGETHER<br>IN HARMONY</h1>
+        <img style="transform: translate(50.55%, 54.8%); width:50%;" src="./Images/Index/VideoFrame.png">
+    <!-- YouTube video iframe (initially hidden) -->
+    <iframe id="youtube-video" class="video-iframe" 
+            src="https://www.youtube.com/embed/pD7FB8wSyhw" 
+            frameborder="0" width="45%" height="50.2%" z-index="2"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+            <style>
+                #youtube-video {
+                    transform: translate(-50%, 55%);
+                }
+            </style>
+    </div>
         <div style="height:2vh; background: linear-gradient(to top, #484848 0%, #000000 100%);"></div>
         <div style="height:75%; background: linear-gradient(to bottom, #484848 0%, #000000 100%);">
-        <div style="width:100%; text-align: center;"><h1 style="font-size: 5vw;" class="furorenostroke">Embrace a community!</h1></div>
+        <div style="width:100%; text-align: center; padding: 2%;"><h1 style="font-size: 5vw;" class="furorenostroke">Embrace a community!</h1></div>
         <div style="justify-content: left; align-items: center; display: flex;">
             <div class="sidepre footerbuttonsimage">
                 <img style="width:60%; float:left;" src="./Images/Index/DeathStar.png">
@@ -55,7 +78,21 @@
       }, 1000); // Adjust the duration as needed
     });
     window.onload = function() {
-
+                aud = document.getElementById("myAudio").volume=1;
+                var audio = document.getElementById("myAudio");
+                var audioControl = document.getElementById("audioControl");
+                var audioButton = document.getElementById("audioButton");
+                var audioSlider = document.getElementById("audioSlider");
+    
+                audio.play();
+    
+                audioButton.addEventListener("click", function() {
+                    audioControl.classList.toggle("open");
+                });
+    
+                audioSlider.addEventListener("input", function() {
+                    audio.volume = audioSlider.value / 100;
+                });
     document.getElementById("divisor").remove();
     /*Make Header Gradient Linear
     document.getElementById("header").style.background="#484848";*/
